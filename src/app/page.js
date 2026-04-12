@@ -1,4 +1,5 @@
 import Hero from "@/components/Hero";
+import Stats from "@/components/Stats";
 
 export default function Home() {
   return (
@@ -6,6 +7,7 @@ export default function Home() {
     <>
     <main>
       <Hero></Hero>
+      <Stats></Stats>
     </main>
 
      

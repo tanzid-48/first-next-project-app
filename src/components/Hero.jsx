@@ -1,9 +1,11 @@
 import Image from 'next/image';
 import React from 'react';
 import HeroImg from '../assets/images/hero.png';
+import Stats from './Stats';
 
 const Hero = () => {
     return (
+         <>
         <div className="hero min-h-screen mt-7 ">
 
             <div className="hero-content w-full">
@@ -42,6 +44,7 @@ const Hero = () => {
                 </div>
             </div>
         </div>
+         </>
     );
 };
 
