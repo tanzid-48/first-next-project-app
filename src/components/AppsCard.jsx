@@ -2,7 +2,7 @@
 import Image from 'next/image';
 import React from 'react';
 
-const AppsCard = ({ app }) => {
+const AppsCard = ({ app}) => {
 
     const { title,image,ratingAvg, downloads, size,companyName} = app;
 

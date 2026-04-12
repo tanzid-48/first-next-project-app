@@ -4,7 +4,7 @@ import React from 'react';
 const AppsPage = () => {
     return (
         <div>
-            <TrendingApps></TrendingApps>
+            <TrendingApps from = "apps"></TrendingApps>
         </div>
     );
 };

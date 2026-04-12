@@ -9,7 +9,7 @@ export default function Home() {
     <main>
       <Hero></Hero>
       <Stats></Stats>
-      <TrendingApps></TrendingApps> 
+      <TrendingApps from = "home" ></TrendingApps> 
 
     </main>
 
