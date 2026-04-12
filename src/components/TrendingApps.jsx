@@ -1,9 +1,7 @@
-
 import fs from 'fs';
 import path from 'path'
 import React from 'react';
 import AppsCard from './AppsCard';
-
 
 const TrendingApps =async() =>{
 const filePath = path.join(process.cwd(), 'public', 'data.json');
@@ -24,7 +22,7 @@ const apps = JSON.parse(fs.readFileSync(filePath, 'utf-8'));
                 </p>
             </div>
 
-           <div className="">
+           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 px-4">
             {
              apps.map(app => <AppsCard key={app.id} app ={app}></AppsCard>)
             }

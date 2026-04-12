@@ -1,9 +1,10 @@
+import TrendingApps from '@/components/TrendingApps';
 import React from 'react';
 
 const AppsPage = () => {
     return (
         <div>
-            <h2>This is App PAge</h2>
+            <TrendingApps></TrendingApps>
         </div>
     );
 };
