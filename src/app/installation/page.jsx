@@ -15,10 +15,9 @@ const InstalledPage = () => {
 
     return (
         <div className="w-11/12 mx-auto px-4 py-8">
-            <h1 className="text-3xl font-bold mb-6">Installed Apps ({installedApp.length})</h1>
-
+           
             {installedApp.length === 0 ? (
-                <p className="text-gray-500 text-center mt-20">No apps installed yet.</p>
+                <p className="text-gray-500 text-4xl text-center mt-20">No apps installed yet.</p>
             ) : (
                 <div className="flex flex-col gap-4">
                     {installedApp.map((app) => (
