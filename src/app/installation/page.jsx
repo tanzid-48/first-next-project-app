@@ -1,11 +1,16 @@
-import React from 'react';
+'use client'
+import React, { useContext } from 'react';
+import { InstallAppContext } from '../context/InstallAppContext';
 
-const InstallationPage = () => {
+const InstalledPage = () => {
+
+    const {installedApp} = useContext(InstallAppContext);
+    console.log('from install app',installedApp);
     return (
         <div>
-            <h2>This is installation page</h2>
+            <h1>this is install page</h1>
         </div>
     );
 };
 
-export default InstallationPage;
+export default InstalledPage;

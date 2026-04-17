@@ -39,10 +39,7 @@ const TrendingApps = async ({ from }) => {
                 </div>
             )}
 
-
-
-
-            {/* <div className="">
+         {/* <div className="">
              {
                 apps.slice(0,9).map((app,index) => {
                     return <AppsCard app={app} key={index}></AppsCard>
