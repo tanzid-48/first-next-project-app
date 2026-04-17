@@ -1,6 +1,7 @@
 'use client'
 import { InstallAppContext } from '@/app/context/InstallAppContext';
 import React, { useContext } from 'react';
+import { toast } from 'sonner';
 
 
 const InstallButton = ({app}) => {
@@ -9,7 +10,12 @@ const InstallButton = ({app}) => {
     console.log()
 
    const handleInstallButton = () => {
-     
+     const alreadyInstalled = installedApp.find(a => a.id === app.id);
+      if (alreadyInstalled) {
+    toast.error("Already installed!");
+    return;
+  }
+    
   console.log("app install clicked");
 
   setInstalledApp([...installedApp,app]);
