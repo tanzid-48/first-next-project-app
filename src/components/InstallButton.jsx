@@ -12,7 +12,7 @@ const InstallButton = ({app}) => {
    const handleInstallButton = () => {
      const alreadyInstalled = installedApp.find(a => a.id === app.id);
       if (alreadyInstalled) {
-    toast.error("Already installed!");
+    toast.error(`${app.title} Already installed!`);
     return;
   }
     
