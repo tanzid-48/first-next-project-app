@@ -1,36 +1,116 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 🎮 My Play Store App
 
-## Getting Started
+A modern, responsive Play Store clone built with **Next.js 15**, **Tailwind CSS**, and **DaisyUI** — featuring app browsing, install/uninstall functionality, and a live analytics dashboard.
 
-First, run the development server:
+🌐 **Live Demo:** [my-play-store-app.vercel.app/apps](https://my-play-store-app.vercel.app/apps)
+📦 **Repository:** [github.com/tanzid-48/first-next-project-app](https://github.com/tanzid-48/first-next-project-app)
+
+---
+
+## ✨ Features
+
+- 🔍 **Browse Apps** — Explore apps with ratings, download counts, and size info
+- 📲 **Install / Uninstall** — One-click install and uninstall with toast notifications
+- 🔔 **Toast Notifications** — Beautiful alerts powered by [Sonner](https://sonner.emilkowal.ski/)
+- 📊 **Dashboard** — Live pie chart showing installed apps breakdown (Recharts)
+- 📋 **Installed Apps Page** — View and manage all installed apps
+- ⚡ **Context API** — Global state management for installed apps across pages
+- 📱 **Responsive Design** — Mobile-friendly layout with Tailwind CSS + DaisyUI
+
+---
+
+## 🛠️ Tech Stack
+
+| Technology | Purpose |
+|---|---|
+| [Next.js 15](https://nextjs.org/) | React framework (App Router) |
+| [Tailwind CSS](https://tailwindcss.com/) | Utility-first styling |
+| [DaisyUI](https://daisyui.com/) | UI component library |
+| [Recharts](https://recharts.org/) | Dashboard pie chart |
+| [Sonner](https://sonner.emilkowal.ski/) | Toast notifications |
+| [React Context API](https://react.dev/reference/react/createContext) | Global state management |
+
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Node.js 18+
+- npm or yarn
+
+### Installation
 
 ```bash
+# Clone the repository
+git clone https://github.com/tanzid-48/first-next-project-app.git
+
+# Navigate into the project
+cd first-next-project-app
+
+# Install dependencies
+npm install
+
+# Run the development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 📁 Project Structure
 
-## Learn More
+```
+src/
+└── app/
+    ├── apps/
+    │   └── [id]/          # Dynamic app details page
+    ├── context/
+    │   ├── InstallAppContext.js       # Context definition
+    │   └── InstallAppsProvider.jsx    # Context provider
+    ├── dashboard/
+    │   └── page.jsx       # Dashboard with pie chart
+    ├── installed/
+    │   └── page.jsx       # Installed apps page
+    ├── layout.js          # Root layout
+    └── page.js            # Home / Apps listing page
 
-To learn more about Next.js, take a look at the following resources:
+components/
+├── Navbar.jsx
+├── Footer.jsx
+├── AppsCard.jsx           # App card component
+└── InstallButton.jsx      # Install button with context
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 📸 Pages
 
-## Deploy on Vercel
+| Page | Route | Description |
+|---|---|---|
+| Home / Apps | `/apps` | Browse all available apps |
+| App Details | `/apps/[id]` | Detailed view of a single app |
+| Installed Apps | `/installed` | View & uninstall installed apps |
+| Dashboard | `/dashboard` | Analytics pie chart |
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🧠 How It Works
+
+1. **Context API** — `InstallAppContext` stores the list of installed apps globally
+2. **Install** — Clicking "Install Now" adds the app to global state with a success toast
+3. **Uninstall** — Clicking "Uninstall" removes the app from state with an error toast
+4. **Dashboard** — Reads from the same context and renders a live pie chart
+
+---
+
+## 🙌 Author
+
+**Tanzid** — [@tanzid-48](https://github.com/tanzid-48)
+
+---
+
+## 📄 License
+
+This project is open source and available under the [MIT License](LICENSE).
