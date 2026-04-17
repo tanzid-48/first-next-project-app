@@ -3,6 +3,7 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import InstallAppsProvider from "./context/InstallAppsProvider";
+import { Toaster } from "sonner";
 
 
 
@@ -34,6 +35,7 @@ export default function RootLayout({ children }) {
         {children} 
         <Footer></Footer>
       </InstallAppsProvider>
+        <Toaster position="top-right" richColors />
         </body>
     </html>
   );

@@ -9,8 +9,12 @@ const InstallButton = ({app}) => {
     console.log()
 
    const handleInstallButton = () => {
+     
   console.log("app install clicked");
-  setInstalledApp([...installedApp,app])
+
+  setInstalledApp([...installedApp,app]);
+  toast.success(`${app.title} installed successfully!`);
+
 }
     return (
         <>
